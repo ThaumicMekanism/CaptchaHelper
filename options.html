@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            width: 400px;
+        }
+        
+        .input_saved_indicator.changed {
+            outline-width:  6px !important;
+        }
+        
+        .input_saved_indicator {
+            outline-offset: -2px;
+            transition: outline-width 0.2s;
+            outline: -webkit-focus-ring-color auto 0 !important;
+        }
+        
+        .saved_indicator.saved {
+            opacity: 1;
+        }
+        
+        .saved_indicator {
+            color: #5897fb;
+            transition: opacity 0.2s;
+            opacity: 0;
+        }
+        
+        #autoclick_exclusions {
+            width: 400px;
+            height: 100px;
+        }
+        
+        /*
+        .error_indicator.shown {
+            opacity: 1;
+        }
+        
+        .error_indicator {
+            color: red;
+            transition: opacity 0.2s;
+            opacity: 0;
+        }
+        */
+    </style>
+</head>
+<body>
+    <h3>Enable auto-click</h3>
+    <input type="checkbox" name="enable_autoclick" id="enable_autoclick" class="input_saved_indicator" /><label for="enable_autoclick">&nbsp; Enable/Disable auto-click</label>
+    <br />
+    Auto-click will not work if this option disabled
+    <br /><hr />
+    <h3>Auto-click web-site exclusions</h3>
+    <textarea name="autoclick_exclusions" id="autoclick_exclusions" class="input_saved_indicator"></textarea>
+    <br />
+    Auto-click will not work on listed web-sites. Newline separated. <br />
+    For example: <br />
+    <small style="color: grey; float: left;">
+        www.google.com<br />
+        facebook.com
+    </small>
+    <input type="button" name="save_autoclick_exclusions" id="save_autoclick_exclusions" value="save exclusion web-sites list" style="float: right;" />
+    <br style="clear: both;" /><hr />
+    <span class="saved_indicator" id="saved_indicator">saved</span>
+
+    <script src="/js/jquery-1.7.js"></script>
+    <script src="/js/options.js"></script>
+    <script src="/js/methods.js"></script>
+</body>
+</html>
