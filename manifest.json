@@ -8,7 +8,7 @@
          "32": "/32.png"
       },
       "default_popup": "options.html",
-      "default_title": "Recaptcha clicker Options"
+      "default_title": "Captcha Helper Options"
    },
    "content_scripts": [ {
       "all_frames": true,
@@ -21,16 +21,15 @@
       "32": "/32.png",
       "64": "/64.png"
    },
-   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhHv9BcP9HWaCWZpIIwHw5gY8XCWPWpAWGYxDv1emxLbo8SgdEJaf1w3O7+AxyiBGtbn4rbbLn2MZkY3tEFaHOd9KixGqafGBvukaKkeqCXORsJ8BlZUa9X+o6/Jz132DDRDpmyF5s+37I3uKhH36v8Q6FvmQc4SaHQsUiflP7JqXQKLkKkpwyIJdAaa2iToDiX8m4FhldED2ObeAmOohlrIUaKqBCS02yUP4IkgdIW9vMDMcE4JLzqNsn2RQtg/gF+iQKTwZZ9cL1E6lip3XMfsINWu6l43B9yOvsQqMRAvRrB8mCCta0knkMC6gZK5xP3swtOXHicY0BsU+xp0mDQIDAQAB",
    "manifest_version": 2,
-   "name": "I'm not a robot captcha clicker",
+   "name": "Captcha Helper",
    "options_page": "options.html",
    "options_ui": {
       "chrome_style": true,
       "page": "options.html"
    },
    "permissions": [ "activeTab", "storage", "contextMenus", "\u003Call_urls>" ],
-   "short_name": "Recaptcha clicker",
+   "short_name": "Captcha Helper",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "0.3"
+   "version": "0.1"
 }

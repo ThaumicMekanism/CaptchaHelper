@@ -3,7 +3,8 @@
 <head>
     <style>
         body {
-            width: 400px;
+            width: 450px;
+            font-family: Arial;
         }
         
         .input_saved_indicator.changed {
@@ -31,6 +32,47 @@
             height: 100px;
         }
         
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            background: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            background: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #aaa !important;
+            background: #aaa;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc !important;
+            background: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
         /*
         .error_indicator.shown {
             opacity: 1;
@@ -45,23 +87,39 @@
     </style>
 </head>
 <body>
-    <h3>Enable auto-click</h3>
-    <input type="checkbox" name="enable_autoclick" id="enable_autoclick" class="input_saved_indicator" /><label for="enable_autoclick">&nbsp; Enable/Disable auto-click</label>
-    <br />
-    Auto-click will not work if this option disabled
-    <br /><hr />
-    <h3>Auto-click web-site exclusions</h3>
-    <textarea name="autoclick_exclusions" id="autoclick_exclusions" class="input_saved_indicator"></textarea>
-    <br />
-    Auto-click will not work on listed web-sites. Newline separated. <br />
-    For example: <br />
-    <small style="color: grey; float: left;">
-        www.google.com<br />
-        facebook.com
-    </small>
-    <input type="button" name="save_autoclick_exclusions" id="save_autoclick_exclusions" value="save exclusion web-sites list" style="float: right;" />
+    <center><h1>Captcha Helper</h1></center>
+
+    <div class="tab">
+      <button class="tablinks active" type="tab" name="Recaptcha">Recaptcha</button>
+      <button class="tablinks" type="tab" name="SolveMedia">Solve Media</button>
+    </div>
+
+    <div id="Recaptcha" class="tabcontent" style="display: block;">
+        <h3>Enable auto-click</h3>
+        <input type="checkbox" name="enable_autoclick" id="enable_autoclick" class="input_saved_indicator" /><label for="enable_autoclick">&nbsp; Enable/Disable auto-click</label>
+        <br />
+        Auto-click will not work if this option disabled
+        <br /><hr />
+        <h3>Auto-click web-site exclusions</h3>
+        <textarea name="autoclick_exclusions" id="autoclick_exclusions" class="input_saved_indicator"></textarea>
+        <br />
+        Auto-click will not work on listed web-sites. Newline separated. <br />
+        For example: <br />
+        <small style="color: grey;">
+            www.google.com<br />
+            facebook.com
+        </small>
+    </div>
+
+    <div id="SolveMedia" class="tabcontent">
+        There will be some stuff about solve media here soon!
+    </div>
+
+    <br>
+    <center><input type="button" name="save_autoclick_exclusions" id="save_autoclick_exclusions" value="Save" /></center>
     <br style="clear: both;" /><hr />
     <span class="saved_indicator" id="saved_indicator">saved</span>
+
 
     <script src="/js/jquery-1.7.js"></script>
     <script src="/js/options.js"></script>
