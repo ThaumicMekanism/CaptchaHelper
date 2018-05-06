@@ -15,7 +15,7 @@
       "js": [ "/js/jquery-1.7.js", "/js/methods.js", "/js/content_script/click.js", "/js/content_script/recaptcha_helper.js" ],
       "matches": [ "http://*/*", "https://*/*" ]
    } ],
-   "description": "This app will save you some time by clicking on \"I'm not a robot\" checkbox for you.",
+   "description": "This app will save you some time by clicking on \"I'm not a robot\" checkbox. It also has extra features to make it easier to solve ReCaptcha.",
    "icons": {
       "128": "/128.png",
       "32": "/32.png",
